@@ -99,6 +99,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SiparisYonetimi.Business\SiparisYonetimi.Business.csproj">
+      <Project>{06623656-5eae-4591-bc86-9056ca444a0f}</Project>
+      <Name>SiparisYonetimi.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SiparisYonetimi.Entities\SiparisYonetimi.Entities.csproj">
+      <Project>{cc8a1c42-04bf-439b-bfa3-6de9cf5a0093}</Project>
+      <Name>SiparisYonetimi.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
