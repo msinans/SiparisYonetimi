@@ -5,7 +5,7 @@
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<SiparisYonetimi.Data.DatabaseContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<DatabaseContext>
     {
         public Configuration()
         {
@@ -16,7 +16,7 @@
         protected override void Seed(DatabaseContext context)
         {
            // BU metot veritabanı oluşturulduktan sonra çalışır ve tablo lara örnek kayıt ekleyebilmemizi sağlar.
-           if(context.Users.Any()) // Eğer veritabanında hiç kayıt yoksa
+           if(!context.Users.Any()) // Eğer veritabanında hiç kayıt yoksa
             {
                 context.Users.Add(new Entities.User // Yeni bir kullanıcı oluştur
                 {
