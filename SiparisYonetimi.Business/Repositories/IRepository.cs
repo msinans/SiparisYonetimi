@@ -9,6 +9,7 @@ namespace SiparisYonetimi.Business.Repositories
         List<T> GetAll();
         List<T> GetAll(Expression<Func<T, bool>> expression);
         T Find(int id); // T yazarak bütün class lar için çalışmasını itiyoruz
+        T Get(Expression<Func<T, bool>> expression);
         void Add(T entity); // void de yazsak olur int de olur
         void Update(T entity);
         void Delete(T entity);

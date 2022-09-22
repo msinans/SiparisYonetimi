@@ -22,5 +22,11 @@ namespace SiparisYonetimi.WinFormsUI
             KullaniciYonetimi kullanici = new KullaniciYonetimi();
             kullanici.ShowDialog();
         }
+
+        private void markaYönetimiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MarkaYonetimi markaYonetimi = new MarkaYonetimi();
+            markaYonetimi.ShowDialog();
+        }
     }
 }
