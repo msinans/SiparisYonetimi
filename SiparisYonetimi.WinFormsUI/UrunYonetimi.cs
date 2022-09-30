@@ -1,13 +1,7 @@
 ﻿using SiparisYonetimi.Business.Managers;
 using SiparisYonetimi.Entities;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SiparisYonetimi.WinFormsUI
@@ -27,11 +21,7 @@ namespace SiparisYonetimi.WinFormsUI
             cbKategoriler.DataSource =categoryManager.GetAll();  
             cbMarkalar.DataSource = brandManager.GetAll();
         }
-        private void UrunYonetimi_Load(object sender, EventArgs e)
-        {
-            Yukle();
-        }
-        void Temizle()
+       void Temizle()
         {
             var nesneler = groupBox1.Controls.OfType<TextBox>();
             foreach (var item in nesneler)
@@ -42,29 +32,14 @@ namespace SiparisYonetimi.WinFormsUI
             btnGuncelle.Enabled = false;
             btnSil.Enabled = false;
         }
+        private void UrunYonetimi_Load(object sender, EventArgs e)
+        {
+            Yukle();
+        }
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            void Kontrol()
-            {
-                if (string.IsNullOrWhiteSpace(txtUrunAdi.Text))
-                {
-                    MessageBox.Show("Ürün Adı Boş Geçilemez!");
-                    return;
-                }
-                if (string.IsNullOrWhiteSpace(txtFiyat.Text))
-                {
-                    MessageBox.Show("Ürün Adı Boş Geçilemez!");
-                    return;
-                }
-                if (string.IsNullOrWhiteSpace(txtStok.Text))
-                {
-                    MessageBox.Show("Ürün Adı Boş Geçilemez!");
-                    return;
-                }
-            }
-
-           
-           
+            Kontrol();
+                                    
             try
             {
                 Product urun = new Product(); // önce boş bir ürün oluşturduk ve özelliklerini aşağıda  datadan çekiyoruz
@@ -87,38 +62,17 @@ namespace SiparisYonetimi.WinFormsUI
             }
             catch (Exception)
             {
-
                 MessageBox.Show("Hata Oluştu!");
             }
-
-
-
         }
 
         private void dgvUrunler_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            void Kontrol()
-            {
-                if (string.IsNullOrWhiteSpace(txtUrunAdi.Text))
-                {
-                    MessageBox.Show("Ürün Adı Boş Geçilemez!");
-                    return;
-                }
-                if (string.IsNullOrWhiteSpace(txtFiyat.Text))
-                {
-                    MessageBox.Show("Ürün Adı Boş Geçilemez!");
-                    return;
-                }
-                if (string.IsNullOrWhiteSpace(txtStok.Text))
-                {
-                    MessageBox.Show("Ürün Adı Boş Geçilemez!");
-                    return;
-                }
-            }
             try
             {
                 int id = (int)dgvUrunler.CurrentRow.Cells[0].Value;
                 var urun = manager.Find(id);
+
                 txtUrunAdi.Text = urun.Name;
                 txtStok.Text = urun.Stock.ToString();
                 txtResim.Text = urun.Image;
@@ -146,12 +100,12 @@ namespace SiparisYonetimi.WinFormsUI
             }
             if (string.IsNullOrWhiteSpace(txtFiyat.Text))
             {
-                MessageBox.Show("Ürün Adı Boş Geçilemez!");
+                MessageBox.Show("Fiyat Boş Geçilemez!");
                 return;
             }
             if (string.IsNullOrWhiteSpace(txtStok.Text))
             {
-                MessageBox.Show("Ürün Adı Boş Geçilemez!");
+                MessageBox.Show("Stok Miktarı Boş Geçilemez!");
                 return;
             }
         }
