@@ -10,8 +10,14 @@
     </h1>
 
     <div>
-        <asp:GridView ID="dgvKategoriler" runat="server" cssClass="table table-striped table-hover"></asp:GridView>
+        <asp:GridView ID="dgvKategoriler" runat="server" CssClass="table table-striped table-hover" OnSelectedIndexChanged="dgvKategoriler_SelectedIndexChanged">
+            <Columns>
+                <asp:CommandField ShowSelectButton="True"></asp:CommandField>
+            </Columns>
+        </asp:GridView>
     </div>
+
+    <asp:Literal ID="ltMesaj" runat="server"></asp:Literal>
 
     <table class="table table-striped table-hover">
         <tr>
@@ -41,8 +47,8 @@
             <td></td>
             <td>
                 <asp:Button ID="btnEkle" runat="server" Text="Ekle" CssClass="btn btn-primary" OnClick="btnEkle_Click"/>
-                <asp:Button ID="btnGuncelle" runat="server" Text="Güncelle" Enabled="false" CssClass="btn btn-success"/>
-                <asp:Button ID="btnSil" runat="server" Text="Sil" Enabled="false" CssClass="btn btn-danger" />
+                <asp:Button ID="btnGuncelle" runat="server" Text="Güncelle"  CssClass="btn btn-success" OnClick="btnGuncelle_Click" Enabled="false"/>
+                <asp:Button ID="btnSil" runat="server" Text="Sil"  CssClass="btn btn-danger" OnClick="btnSil_Click" Enabled="false"/>
             </td>           
         </tr>
     </table>

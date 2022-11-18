@@ -146,5 +146,10 @@ namespace SiparisYonetimi.WinFormsUI
         {
             dgvMarkalar.DataSource = manager.GetAll(brand=> brand.Name.Contains(txtAra.Text));
         }
+
+        private void dgvMarkalar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

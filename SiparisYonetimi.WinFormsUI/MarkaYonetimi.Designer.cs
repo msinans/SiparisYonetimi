@@ -54,6 +54,7 @@
             this.dgvMarkalar.Size = new System.Drawing.Size(460, 399);
             this.dgvMarkalar.TabIndex = 0;
             this.dgvMarkalar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMarkalar_CellClick);
+            this.dgvMarkalar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMarkalar_CellContentClick);
             // 
             // txtAra
             // 
