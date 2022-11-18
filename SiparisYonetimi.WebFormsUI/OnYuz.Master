@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="OnYuz.Master.cs" Inherits="SiparisYonetimi.WebFormsUI.OnYuz" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Onyuz.Master.cs" Inherits="SiparisYonetimi.WebFormsUI.OnYuz" %>
 
 <!DOCTYPE html>
 

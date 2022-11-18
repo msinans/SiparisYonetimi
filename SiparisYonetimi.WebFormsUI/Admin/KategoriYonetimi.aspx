@@ -8,6 +8,7 @@
     <h1>
         Kategori Yönetimi
     </h1>
+
     <div>
         <asp:GridView ID="dgvKategoriler" runat="server" cssClass="table table-striped table-hover"></asp:GridView>
     </div>
@@ -42,8 +43,7 @@
                 <asp:Button ID="btnEkle" runat="server" Text="Ekle" CssClass="btn btn-primary" OnClick="btnEkle_Click"/>
                 <asp:Button ID="btnGuncelle" runat="server" Text="Güncelle" Enabled="false" CssClass="btn btn-success"/>
                 <asp:Button ID="btnSil" runat="server" Text="Sil" Enabled="false" CssClass="btn btn-danger" />
-            </td>
-           
+            </td>           
         </tr>
     </table>
 

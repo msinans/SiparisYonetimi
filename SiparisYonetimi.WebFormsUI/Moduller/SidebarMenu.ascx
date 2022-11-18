@@ -39,9 +39,7 @@
               Marka Yönetimi
             </a>
           </li>
-        </ul>
-
-        
+        </ul>       
         
        
       </div>

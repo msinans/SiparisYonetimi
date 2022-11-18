@@ -5,5 +5,5 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    Buray yazdığımız yazılar onyuz.master içerisindeki ContentPlaceHolder1 isimli elementin içinde gösterilir
+    Buraya yazdığımız yazılar onyuz.master içerisindeki ContentPlaceHolder1 isimli elementin içinde gösterilir!
 </asp:Content>
