@@ -9,7 +9,7 @@
         Ürün Yönetimi
     </h1>
 
-    <asp:GridView ID="dgvUrunler" runat="server" CssClass="table table-stripped table-hover">
+    <asp:GridView ID="dgvUrunler" runat="server" CssClass="table table-striped table-hover" OnSelectedIndexChanged="dgvUrunler_SelectedIndexChanged">
          <Columns>
                 <asp:CommandField ShowSelectButton="True"></asp:CommandField>
             </Columns>
@@ -20,25 +20,63 @@
 
     <table class=" table table-hover">
         <tr>
-            <td></td>
-             <td></td>
+            <td>Ürün Adı</td>
+             <td>
+                 <asp:TextBox ID="txtUrunAdi" runat="server" CssClass="form-control" required></asp:TextBox>
+
+             </td>
         </tr>
          <tr>
-            <td></td>
-             <td></td>
+            <td>Açıklama</td>
+             <td>
+                 <asp:TextBox ID="txtAciklama" runat="server" TextMode="MultiLine" CssClass="form-control"></asp:TextBox></td>
         </tr>
          <tr>
-            <td></td>
-             <td></td>
+            <td>Fiyat</td>
+             <td>
+                 <asp:TextBox ID="txtFiyat" runat="server" CssClass="form-control" required></asp:TextBox></td>
         </tr>
          <tr>
-            <td></td>
-             <td></td>
+            <td>Stok</td>
+             <td>
+                 <asp:TextBox ID="txtStok" runat="server" CssClass="form-control" required></asp:TextBox></td>
         </tr>
          <tr>
-            <td></td>
-             <td></td>
+            <td>Resim</td>
+             <td>
+                 <asp:FileUpload ID="fuResim" runat="server" CssClass="form-control"/>
+             </td>
         </tr>
+        <tr>
+            <td>Durum</td>
+             <td>
+                 <asp:CheckBox ID="chbDurum" runat="server" Text="Aktif" />
+             </td>
+        </tr>
+        <tr>
+            <td>Kategori</td>
+            <td>
+                <asp:DropDownList ID="cbKategoriler" runat="server" CssClass="form-select" DataTextField="Name" DataValueField="Id"></asp:DropDownList>
+            </td>
+        </tr>
+
+         <tr>
+            <td>Marka</td>
+            <td>
+                <asp:DropDownList ID="cbMarkalar" runat="server" CssClass="form-select" DataTextField="Name" DataValueField="Id"></asp:DropDownList>
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>
+                <asp:Button ID="btnEkle" runat="server" Text="Ekle" CssClass="btn btn-primary" OnClick="btnEkle_Click" />
+                <asp:Button ID="btnGuncelle" runat="server" Text="Güncelle" CssClass="btn btn-success" OnClick="btnGuncelle_Click" Enabled="false" />
+                <asp:Button ID="btnSil" runat="server" Text="Sil" CssClass="btn btn-danger" OnClick="btnSil_Click" Enabled="false" />
+            </td>
+
+        </tr>
+
     </table>
 
 </asp:Content>

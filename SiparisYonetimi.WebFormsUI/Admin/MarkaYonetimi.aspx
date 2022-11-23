@@ -9,8 +9,7 @@
         Marka Yönetimi
     </h1>
 
-<asp:GridView ID="dgvMarkalar" runat="server" CssClass="table table-stripped table-hover"
-    OnSelectedIndexChanged="dgvMarkalar_SelectedIndexChanged">
+<asp:GridView ID="dgvMarkalar" runat="server" CssClass="table table-striped table-hover" OnSelectedIndexChanged="dgvMarkalar_SelectedIndexChanged">
      <Columns>
                 <asp:CommandField ShowSelectButton="True"></asp:CommandField>
             </Columns>
@@ -32,7 +31,7 @@
                Logo
             </td>
             <td>
-                <asp:FileUpload ID="fuLogo" runat="server" CssClass="form-control" /></asp:FileUpload>
+                <asp:FileUpload ID="fuLogo" runat="server" CssClass="form-control" ></asp:FileUpload>
                 <asp:HiddenField ID="hfResimAdi" runat="server" />
             </td>
         </tr>
