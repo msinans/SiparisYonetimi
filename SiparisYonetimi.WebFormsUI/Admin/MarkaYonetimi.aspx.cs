@@ -17,7 +17,7 @@ namespace SiparisYonetimi.WebFormsUI.Admin
             dgvMarkalar.DataSource = manager.GetAll();
             dgvMarkalar.DataBind();
         }
-        protected void dgvKategoriler_SelectedIndexChanged(object sender, EventArgs e)
+        protected void dgvMarkalar_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {

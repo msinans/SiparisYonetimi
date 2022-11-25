@@ -17,7 +17,7 @@ namespace SiparisYonetimi.WinFormsUI
         void Temizle()
         {
             txtAciklama.Text = String.Empty;
-            txtLogo.Text = String.Empty ;
+            txtLogo.Text = String.Empty;
             txtMarkaAdi.Text = String.Empty;
             chbDurum.Checked = false;
             btnGuncelle.Enabled = false;
@@ -58,7 +58,7 @@ namespace SiparisYonetimi.WinFormsUI
 
                 MessageBox.Show("Hata Oluştu!");
             }
-           
+
         }
 
         private void dgvMarkalar_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -87,18 +87,18 @@ namespace SiparisYonetimi.WinFormsUI
             if (string.IsNullOrWhiteSpace(txtMarkaAdi.Text))
             {
                 MessageBox.Show("Marka Adı Giriniz!");
-                return; 
+                return;
             }
             int id = Convert.ToInt32(dgvMarkalar.CurrentRow.Cells[0].Value);
 
             Brand brand = manager.Find(id);
-            
-                brand.Description = txtAciklama.Text;
-                brand.IsActive = chbDurum.Checked;
-                brand.Logo = txtLogo.Text;
-                brand.Name = txtMarkaAdi.Text;
-                
-        
+
+            brand.Description = txtAciklama.Text;
+            brand.IsActive = chbDurum.Checked;
+            brand.Logo = txtLogo.Text;
+            brand.Name = txtMarkaAdi.Text;
+
+
             try
             {
                 manager.Update(brand);
@@ -115,7 +115,7 @@ namespace SiparisYonetimi.WinFormsUI
 
                 MessageBox.Show("Hata Oluştu!");
             }
-           
+
         }
 
         private void btnSil_Click(object sender, EventArgs e)
@@ -144,7 +144,7 @@ namespace SiparisYonetimi.WinFormsUI
 
         private void btnAra_Click(object sender, EventArgs e)
         {
-            dgvMarkalar.DataSource = manager.GetAll(brand=> brand.Name.Contains(txtAra.Text));
+            dgvMarkalar.DataSource = manager.GetAll(brand => brand.Name.Contains(txtAra.Text));
         }
 
         private void dgvMarkalar_CellContentClick(object sender, DataGridViewCellEventArgs e)

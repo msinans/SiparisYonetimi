@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace SiparisYonetimi.WebFormsUI.Admin
 {
@@ -11,7 +6,10 @@ namespace SiparisYonetimi.WebFormsUI.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["admin"] == null) //Session nesnesi web uygulamalarında kullanılır ve sayfalar arası veri taşıyabilir.
+            {
+                Response.Redirect("/Admin/Login.aspx");
+            }
         }
     }
 }

@@ -33,15 +33,21 @@
             </td>
         </tr>
          <tr>
-            <td>Telefon</td>
+            <td>Kulllanıcı Adı</td>
             <td>
                 <asp:TextBox ID="txtTelefon" runat="server" CssClass="form-control"></asp:TextBox>
             </td>
         </tr>
          <tr>
+            <td>Şifre</td>
+            <td>
+                <asp:TextBox ID="txtSifre" runat="server" CssClass="form-control"></asp:TextBox>
+            </td>
+        </tr>
+         <tr>
             <td>Adres</td>
             <td>
-                <asp:TextBox ID="txtAdres" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txtKullaniciAdi" runat="server" CssClass="form-control"></asp:TextBox>
             </td>
         </tr>
          <tr>
@@ -51,11 +57,17 @@
             </td>
         </tr>
          <tr>
+            <td>Admin</td>
+            <td>
+                <asp:CheckBox ID="chbAdmin" runat="server" Text="Aktif"/>
+            </td>
+        </tr>
+         <tr>
             <td></td>
             <td>
                 <asp:Button ID="btnEkle" runat="server" Text="Ekle" CssClass=" btn btn-primary" OnClick="btnEkle_Click" />
-                <asp:Button ID="btnGuncelle" runat="server" Text="Güncelle" CssClass=" btn btn-success" OnClick="btnGuncelle_Click" />
-                <asp:Button ID="btnSil" runat="server" Text="Sil" CssClass=" btn btn-danger" OnClick="btnSil_Click" />
+                <asp:Button ID="btnGuncelle" runat="server" Text="Güncelle" CssClass=" btn btn-success" Enabled="false" OnClick="btnGuncelle_Click" />
+                <asp:Button ID="btnSil" runat="server" Text="Sil" CssClass=" btn btn-danger" Enabled="false" OnClick="btnSil_Click" />
             </td> 
     </table>
 

@@ -4,7 +4,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>Müteri Yönetimi</h1>
+    <h1>Müşteri Yönetimi</h1>
 
     <asp:GridView ID="dgvMusteriler" runat="server" CssClass="table table" OnSelectedIndexChanged="dgvMusteriler_SelectedIndexChanged">
         <Columns>
