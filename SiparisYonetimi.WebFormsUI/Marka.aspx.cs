@@ -8,27 +8,26 @@ using System.Web.UI.WebControls;
 
 namespace SiparisYonetimi.WebFormsUI
 {
-    public partial class Kategori : System.Web.UI.Page
+    public partial class Marka : System.Web.UI.Page
     {
-        CategoryManager manager = new CategoryManager();
+        BrandManager brandManager = new BrandManager();
         ProductManager productManager = new ProductManager();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Request.QueryString["id"] != null)
             {
 
-
                 try
                 {
                     int id = Convert.ToInt32(Request.QueryString["id"]);
 
-                    var kategori = manager.Find(id);
+                    var marka = brandManager.Find(id);
 
-                    ltKategoriAdi.Text = kategori.Name;
+                    ltMarkaAdi.Text = marka.Name;
 
-                    ltAciklama.Text = kategori.Description;
+                    ltAciklama.Text = marka.Description;
 
-                    var urunler = productManager.GetAll(p => p.CategoryId == id && p.IsActive == true);
+                    var urunler = productManager.GetAll(p => p.BrandId == id && p.IsActive == true);
 
                     rptUrunler.DataSource = urunler;
                     rptUrunler.DataBind();
@@ -36,7 +35,7 @@ namespace SiparisYonetimi.WebFormsUI
                 catch (Exception)
                 {
 
-                    Response.Write("<script>(Hata Oluştu!)</script>");
+                    Response.Write("<script>alert('Hata Oluştu!')</script>");
                 }
             }
         }
