@@ -18,7 +18,7 @@ namespace SiparisYonetimi.Business.Managers
         }
         public List<User> GetAll(string kelime)
         {
-            return context.Users.Where(user=>user.Name.Contains(kelime) || user.Surname.Contains(kelime)).ToList(); // her kolon içn veya ile arama yaptırılabilir
+            return context.Users.Where(user=>user.Name.Contains(kelime) || user.Surname.Contains(kelime)).ToList(); // her kolon için veya ile arama yaptırılabilir
         }
         public User GetUser(string kullaniciAdi, string sifre)
         {
