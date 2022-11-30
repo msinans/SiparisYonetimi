@@ -1,10 +1,5 @@
 ﻿using SiparisYonetimi.Business.Managers;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace SiparisYonetimi.WebFormsUI
 {
@@ -16,8 +11,6 @@ namespace SiparisYonetimi.WebFormsUI
         {
             if (Request.QueryString["id"] != null)
             {
-
-
                 try
                 {
                     int id = Convert.ToInt32(Request.QueryString["id"]);
@@ -36,7 +29,7 @@ namespace SiparisYonetimi.WebFormsUI
                 catch (Exception)
                 {
 
-                    Response.Write("<script>(Hata Oluştu!)</script>");
+                    Response.Write("<script>alert('Hata Oluştu!')</script>");
                 }
             }
         }

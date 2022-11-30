@@ -16,11 +16,12 @@
         <asp:Repeater ID="rptUrunler" runat="server">
             <ItemTemplate>
                 <div class="col">
-                    <a href="/UrunDetay.aspx?id=/<%#Eval("Id")%>">
-                        <img class=" img-fluid" src="/Img/<%#Eval("Image")%>" alt="<%# Eval("Name")%>" />
+                    <a href="/UrunDetay.aspx?id=<%#Eval("Id")%>">
+                        <img class="img-fluid" src="/Img/<%#Eval("Image")%>" alt="<%#Eval("Name")%>" />
                         <h3><%#Eval("Name")%> <%#Eval("Price")%> ₺</h3>
                     </a>
-               
+               </div>
             </ItemTemplate>
-        </asp:Repeater> </div>
+        </asp:Repeater>
+    </div>
 </asp:Content>

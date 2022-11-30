@@ -27,7 +27,6 @@ namespace SiparisYonetimi.WebFormsUI
                 }
                 catch (Exception)
                 {
-
                     Response.Write("<script>alert('Hata Oluştu!')</script>");
                 }
             }

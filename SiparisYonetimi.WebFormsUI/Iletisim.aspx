@@ -13,20 +13,22 @@
                 <tr>
                     <td>Adınız</td>
                     <td>
-                        <asp:TextBox Id="txtAd" runat="server"></asp:TextBox>
-                    </td>
+                        <asp:TextBox ID="txtAd" runat="server"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td>Soyadınız</td>
-                    <td><asp:TextBox Id="txtSoyad" runat="server"></asp:TextBox></td>
+                    <td>
+                        <asp:TextBox ID="txtSoyad" runat="server"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td>Email Adresiniz</td>
-                    <td><asp:TextBox Id="txtEmail" runat="server"></asp:TextBox></td>
+                    <td>
+                        <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td>Mesajınız</td>
-                    <td><asp:TextBox Id="txtMesaj" runat="server"></asp:TextBox></td>
+                    <td>
+                        <asp:TextBox ID="txtMesaj" runat="server"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td></td>
@@ -48,8 +50,9 @@
                 Telefon : 0216 444 04 44
             </div>
         </div>
-        <div class="col"></div>
-        <h3>Harita</h3>
-        <div></div>
+        <div class="col">
+            <h3>Harita</h3>
+            <div></div>
+        </div>
     </div>
 </asp:Content>

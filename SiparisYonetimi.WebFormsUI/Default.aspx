@@ -19,19 +19,20 @@
             <asp:Repeater ID="rptMarkalar" runat="server">
                 <ItemTemplate>
                     <div class="col-lg-2">
-                        <a href="IMarka.aspx?id=<%#Eval("Id") %>">
-                        <img src="/Img/<%#Eval("Logo") %>" alt="<%#Eval("Name") %>" class="img-fluid" /></a>
-                                         
+                        <a href="/Marka.aspx?id=<%#Eval("Id") %>">
+                            <img src="/Img/<%#Eval("Logo") %>" alt="<%#Eval("Name") %>" class="img-fluid" />
+                        </a>
+
                     </div>
                 </ItemTemplate>
             </asp:Repeater>
-            
+
         </div>
         <!-- /.row -->
 
-    <!-- START THE FEATURETTES -->
+        <!-- START THE FEATURETTES -->
 
-        
 
-  </div>
+
+    </div>
 </asp:Content>

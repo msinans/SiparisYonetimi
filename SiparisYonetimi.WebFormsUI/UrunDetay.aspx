@@ -17,8 +17,9 @@
                 <tr>
                     <th>Ürün Fiyatı</th>
                     <td>
-                        : <asp:Literal ID="ltUrunFiyati" runat="server"></asp:Literal></td>
-                    ₺
+                        : <asp:Literal ID="ltUrunFiyati" runat="server"></asp:Literal> ₺
+                    </td>
+                    
                 </tr>
                 <tr>
                     <th>Ürün Stok</th>
