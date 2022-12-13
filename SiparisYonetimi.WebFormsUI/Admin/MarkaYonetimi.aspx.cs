@@ -11,7 +11,7 @@ namespace SiparisYonetimi.WebFormsUI.Admin
 {
     public partial class MarkaYonetimi : System.Web.UI.Page
     {
-        BrandManager manager= new BrandManager();
+        BrandManager manager = new BrandManager();
         protected void Page_Load(object sender, EventArgs e)
         {
             dgvMarkalar.DataSource = manager.GetAll();
