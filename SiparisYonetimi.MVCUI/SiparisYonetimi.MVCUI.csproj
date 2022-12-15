@@ -125,7 +125,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\BrandsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\KullaniciYonetimiController.cs" />
     <Compile Include="Areas\Admin\Controllers\MainController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MusteriYonetimiController.cs" />
     <Compile Include="Areas\Admin\Controllers\SliderYonetimiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -158,6 +161,15 @@
     <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Areas\Admin\Views\Main\Index.cshtml" />
+    <Content Include="Img\5b9895-manzara-landscape-scaled.jpeg" />
+    <Content Include="Img\5x7FT-Maldivler-Deniz-Resort-Iskele-Thatched-Stand-nda-zel-Foto-raf-St-dyosu-Backdrop-Arka-Plan.jpg_Q90.jpg_.jfif" />
+    <Content Include="Img\alpler.jpg" />
+    <Content Include="Img\casper_telefon.png" />
+    <Content Include="Img\Hp_Monitor.png" />
+    <Content Include="Img\iphone-14-pro.jfif" />
+    <Content Include="Img\macbookair13teaser.jpg" />
+    <Content Include="Img\SamsungGalaxyA32.jpg" />
+    <Content Include="Img\xiaomi telefon.jfif" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -170,6 +182,18 @@
     <Content Include="Areas\Admin\Views\SliderYonetimi\Create.cshtml" />
     <Content Include="Areas\Admin\Views\SliderYonetimi\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\SliderYonetimi\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Brands\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Brands\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Brands\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Brands\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\KullaniciYonetimi\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\KullaniciYonetimi\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\KullaniciYonetimi\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\KullaniciYonetimi\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\MusteriYonetimi\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\MusteriYonetimi\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\MusteriYonetimi\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\MusteriYonetimi\Delete.cshtml" />
     <None Include="Scripts\jquery-3.6.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.6.1.js" />
     <Content Include="Scripts\jquery-3.6.1.min.js" />
@@ -199,7 +223,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Img\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
