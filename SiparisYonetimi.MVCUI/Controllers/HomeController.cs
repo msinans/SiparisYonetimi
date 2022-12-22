@@ -1,4 +1,5 @@
 ﻿using SiparisYonetimi.Business.Managers;
+using SiparisYonetimi.Entities;
 using SiparisYonetimi.MVCUI.Areas.Admin.Controllers;
 using SiparisYonetimi.MVCUI.Models;
 using System;
@@ -15,6 +16,7 @@ namespace SiparisYonetimi.MVCUI.Controllers
         SliderManager sliderManager = new SliderManager();
         BrandManager brandManager = new BrandManager();
         ProductManager productManager = new ProductManager();
+        ContactManager contactManager = new ContactManager();
         public ActionResult Index()
         {
             var model = sliderManager.GetAll();
@@ -22,7 +24,7 @@ namespace SiparisYonetimi.MVCUI.Controllers
             {
                 Slides = model,
                 Brands = brandManager.GetAll(),
-                Products = productManager.GetAll()
+                Products = productManager.GetAll(p=>p.IsHome)
             };
             return View(homePageViewModel);
         }
@@ -38,8 +40,28 @@ namespace SiparisYonetimi.MVCUI.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+           
             return View();
+        }
+        [HttpPost]
+        public ActionResult Contact(Contact contact)
+        {
+            try
+            { 
+                contactManager.Add(contact);
+                var sonuc = contactManager.SaveChanges();
+                if(sonuc > 0)
+                {
+                    TempData["Message"] = "<div class='alert alert-success'>Mesajınız gönderildi.Teşekkürler..</div>";
+                    return RedirectToAction("Contact");
+                }           
+            }
+            catch (System.Exception)
+            {
+                ModelState.AddModelError("", "Hata Oluştu!");
+            }
+           
+            return View(contact);
         }
     }
 }

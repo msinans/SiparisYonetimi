@@ -20,6 +20,8 @@ namespace SiparisYonetimi.Entities
         public string Image { get; set; }
         [Display(Name = "Durum")]
         public bool IsActive { get; set; }
+        [Display(Name = "Anasayfa")]
+        public bool IsHome { get; set; }
         [Display(Name = "Ürün Kategori")]
         public int CategoryId { get; set; }
         [Display(Name = "Ürün Markası")]
