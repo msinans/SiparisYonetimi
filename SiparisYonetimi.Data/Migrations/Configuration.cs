@@ -29,7 +29,7 @@
                     Surname = "User", 
                     Username = "Admin",
                     Password = "123",
-                    Phone= "123",
+                    Phone= "123"
 
                 });
                 context.SaveChanges(); // Değişiklkleri veritabanına işle
